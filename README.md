@@ -1,3 +1,9 @@
+# USE
+```
+implementation 'com.carozhu:SecurityLibrary:1.0.4@aar'
+```
+
+
 # AES 
 ```
 支持PKCS7Padding

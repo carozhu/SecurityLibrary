@@ -32,5 +32,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //Security -- Failed to resolve: null:unspecified:null 解决办法：在后面添加 @aar
-    implementation 'com.carozhu:SecurityLibrary:1.0.3@aar'
+    implementation 'com.carozhu:SecurityLibrary:1.0.4@aar'
 }
