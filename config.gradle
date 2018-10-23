@@ -1,0 +1,141 @@
+ext {
+
+    android = [
+            minSdkVersion        : 15,
+            compileSdkVersion    : 27,
+            targetSdkVersion     : 27
+    ]
+
+    dependClasspathVersion = [
+            greendao_plugin      : "3.2.2"
+    ]
+
+    dependVersion = [
+            androidSupportSdkVersion   : "27.1.1",
+            guavaVersion               : "24.1-android",
+            gson                       : "2.8.2",
+            multidex                   : "1.0.3",
+            constraintlayout           : "1.1.3",
+
+            retrofitSdkVersion      : "2.4.0",
+            rxrelay                 : "2.0.0",
+            JacksonConverter        : "2.4.0",
+            glideSdkVersion         : "4.7.1",
+            rxJava                  : "2.1.5",
+            rxAndroid               : "2.0.1",
+            okHttp3                 : "3.10.0",
+            RxPermissions           : "0.9.5@aar",
+            LoggerVersion           : "2.2.0",
+            swipebacklayout         : "1.3.0",
+
+            circleimageviewVersion  : "2.2.0",
+            AndroidUtilCodeVersion  : "1.13.6",
+            lifecycle               : "1.1.1",
+            butterknife             : "8.8.1",
+            rxlifecycle             : "2.2.2",
+            dagger                  : "2.16",
+
+            //基于4.7.1的封装. 快捷使用Glide显示图片 自带生成GlideApp。若你想使用你的GlideApp。请在你的build.grade的dependencies中添加： annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+            GlideImageView          : "2.0.0",
+
+            //底部导航栏小红点消息数
+            badgeview               : "1.1.3",
+
+            RxHttpLibrary           : "1.2.1",
+            javaEmail               : "1.0.1"
+    ]
+
+    supportDeps = [
+            supportv4               : "com.android.support:support-v4:$dependVersion.androidSupportSdkVersion",
+            support_vector_drawable : "com.android.support:support-vector-drawable:$dependVersion.androidSupportSdkVersion",
+            appcompatv7             : "com.android.support:appcompat-v7:$dependVersion.androidSupportSdkVersion",
+            support_compat          : "com.android.support:support-compat:$dependVersion.androidSupportSdkVersion",
+            recyclerviewv7          : "com.android.support:recyclerview-v7:$dependVersion.androidSupportSdkVersion",
+            cardview                : "com.android.support:cardview-v7:$dependVersion.androidSupportSdkVersion",
+            design                  : "com.android.support:design:$dependVersion.androidSupportSdkVersion",
+            annotations             : "com.android.support:support-annotations:$dependVersion.androidSupportSdkVersion",
+            constraintlayout        : "com.android.support.constraint:constraint-layout:$dependVersion.constraintlayout",
+            guavaVersion            : "com.google.guava:guava:$dependVersion.guavaVersion",
+            multidex                : "com.android.support:multidex:$dependVersion.multidex",
+            dagger                  : "com.google.dagger:dagger:$dependVersion.dagger"
+    ]
+
+
+    retrofit = [
+            retrofit                : "com.squareup.retrofit2:retrofit:$dependVersion.retrofitSdkVersion",
+            retrofitConverterGson   : "com.squareup.retrofit2:converter-gson:$dependVersion.retrofitSdkVersion",
+            retrofitAdapterRxjava2  : "com.squareup.retrofit2:adapter-rxjava2:$dependVersion.retrofitSdkVersion",
+            JacksonConverter        : "com.squareup.retrofit2:converter-jackson:$dependVersion.JacksonConverter",
+            //A Converter which supports converting strings and both primitives and their boxed types to text/plain bodies.
+            converterScalars        : "com.squareup.retrofit2:converter-scalars:$dependVersion.retrofitSdkVersion"
+    ]
+
+
+    rxJava = [
+            rxJava                : "io.reactivex.rxjava2:rxjava:$dependVersion.rxJava",
+            rxAndroid             : "io.reactivex.rxjava2:rxandroid:$dependVersion.rxAndroid",
+            rxrelay               : "com.jakewharton.rxrelay2:rxrelay:$dependVersion.rxrelay",
+            RxErrorHandler        : 'me.jessyan:rxerrorhandler:2.1.1'
+    ]
+
+    okhttp = [
+            okHttp3              : "com.squareup.okhttp3:okhttp:$dependVersion.okHttp3",
+            Okhttp_interceptor   : "com.squareup.okhttp3:logging-interceptor:$dependVersion.okHttp3"
+    ]
+
+    rxCache = [
+            //https://github.com/VictorAlbertos/RxCache
+    ]
+
+    rxlifecycle2 = [
+            rxlifecycle_android    : "com.trello.rxlifecycle2:rxlifecycle-android:$dependVersion.rxlifecycle",
+            rxlifecycle_components : "com.trello.rxlifecycle2:rxlifecycle-components:$dependVersion.rxlifecycle"
+    ]
+
+    badgeViewDot = [
+            badgeview                 : "q.rorbin:badgeview:$dependVersion.badgeview"
+    ]
+
+    RxPermissions =  "com.tbruyelle.rxpermissions2:rxpermissions:$dependVersion.RxPermissions"
+    orhanobutLogger = "com.orhanobut:logger:$dependVersion.LoggerVersion"
+    swipebacklayout =  "me.imid.swipebacklayout.lib:library:$dependVersion.swipebacklayout"
+    circleimageview = "de.hdodenhof:circleimageview:$dependVersion.circleimageviewVersion"
+    androidUtilCode =  "com.blankj:utilcode:$dependVersion.AndroidUtilCodeVersion"
+    lifecycle =  "android.arch.lifecycle:runtime:$dependVersion.lifecycle"
+
+    //glide = "com.github.bumptech.glide:glide:$dependVersion.glideSdkVersion"
+    glide = "com.sunfusheng:GlideImageView:$dependVersion.GlideImageView"
+    glideCompiler = "com.github.bumptech.glide:compiler:$dependVersion.glideSdkVersion"
+    glideOkhttp = "com.github.bumptech.glide:okhttp3-integration:$dependVersion.glideSdkVersion"
+
+    RxHttpLibrary = "com.carozhu:RxHttpLibrary:$dependVersion.RxHttpLibrary"
+    javaEmail = "com.carozhu:javaEmail:$dependVersion.javaEmail"
+
+    //butterknife
+    butterknife = "com.jakewharton:butterknife:$dependVersion.butterknife"
+    butterknifeCcompiler = "com.jakewharton:butterknife-compiler:$dependVersion.butterknife"
+
+    //dagger
+    daggerCcompiler = "com.google.dagger:dagger-compiler:$dependVersion.dagger"
+
+
+    //pleasec select your implementation
+    supportLibs = supportDeps.values()
+    networkLibs = retrofit.values()
+    rxJavaLibs = rxJava.values()
+    okhttpLibs = okhttp.values()
+    badgeViewDotViewLibs = badgeViewDot.values()
+
+    glideLib = [glide]
+    rxPermissionsLib = [RxPermissions]
+    orhanobutLogger = [orhanobutLogger]
+    swipebacklayoutLib = [swipebacklayout]
+    circleimageviewLib = [circleimageview]
+    androidUtilCodeLib = [androidUtilCode]
+    rxLifecycleLibs = rxlifecycle2.values()
+
+    //annotationProcessor
+    //annotationProcessorLibs =[glideCompiler,butterknifeCcompiler,daggerCcompiler]
+    annotationProcessorLibs =[butterknifeCcompiler,daggerCcompiler]
+    annotationProcessorButterknife =[butterknifeCcompiler]
+}

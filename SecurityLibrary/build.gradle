@@ -1,0 +1,71 @@
+apply plugin: 'com.android.library'
+apply plugin: "guru.stefma.bintrayrelease"
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "http://dl.bintray.com/piasy/maven" }
+    }
+    dependencies {
+        classpath 'guru.stefma.bintrayrelease:bintrayrelease:1.0.0'
+    }
+
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "http://dl.bintray.com/piasy/maven" }
+
+    }
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 5
+        versionName "1.0.4"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //java PKCS7Padding 加密Cannot find any provider supporting AES/CBC/PKCS7Padding 解决办法
+    api 'org.bouncycastle:bcprov-jdk15on:1.60'
+}
+
+//guru.stefma.bintrayrelease
+publish {
+    userOrg = 'carozhu'
+    group = 'com.carozhu'
+    artifactId = 'SecurityLibrary'
+    version = '1.0.4'
+    desc = 'contains AES MD5 BASE64 RSA DES 3DES. AES surport PKCS7Padding'
+    website = 'https://github.com/carozhu/SecurityLibrary.git'
+}
